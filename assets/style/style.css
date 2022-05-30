@@ -48,9 +48,9 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "ac ac del divi"
-    "n1 n2 n3 mult"
+    "n7 n8 n9 mult"
     "n4 n5 n6 plus"
-    "n7 n8 n9 sub"
+    "n1 n2 n3 sub"
     "point point n0 equal";
 }
 
