@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  animation: gradient 10s ease-in-out alternate infinite;
+  background: linear-gradient(
+      45deg,
+      #e328fd,
+      #9824e3,
+      #7634fa,
+      #3024e3,
+      #2854fd
+    )
+    no-repeat;
+  background-size: 300% 300%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #9260f7;
+  border: #000000 solid 2px;
+  display: grid;
+  width: 256px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(64px, auto) 64px 64px 64px 64px 64px;
+  grid-gap: 1px;
+  grid-template-areas:
+    "outp outp outp outp"
+    "outp outp outp outp"
+    "disp disp disp disp"
+    "disp disp disp disp"
+    "disp disp disp disp"
+    "disp disp disp disp"
+    "disp disp disp disp";
+}
+
+.display {
+  display: grid;
+  grid-area: disp;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "ac ac del divi"
+    "n1 n2 n3 mult"
+    "n4 n5 n6 plus"
+    "n7 n8 n9 sub"
+    "point point n0 equal";
+}
+
+.container button {
+  cursor: pointer;
+  font-size: 30px;
+  height: 64px;
+}
+
+.output {
+  grid-area: outp;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  font-size: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.ac {
+  grid-area: ac;
+}
+.del {
+  grid-area: del;
+}
+.divi {
+  grid-area: divi;
+}
+.n1 {
+  grid-area: n1;
+}
+.n2 {
+  grid-area: n2;
+}
+.n3 {
+  grid-area: n3;
+}
+.mult {
+  grid-area: mult;
+}
+.n4 {
+  grid-area: n4;
+}
+.n5 {
+  grid-area: n5;
+}
+.n6 {
+  grid-area: n6;
+}
+.plus {
+  grid-area: plus;
+}
+.n7 {
+  grid-area: n7;
+}
+.n8 {
+  grid-area: n8;
+}
+.n9 {
+  grid-area: n9;
+}
+.sub {
+  grid-area: sub;
+}
+.point {
+  grid-area: point;
+}
+.n0 {
+  grid-area: n0;
+}
+.equal {
+  grid-area: equal;
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
+}
